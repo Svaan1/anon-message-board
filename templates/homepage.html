@@ -1,0 +1,25 @@
+
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'homepage.css') }}">
+</head>
+
+<div class="wrap">
+  <div class="title">
+    Mural Anônimo
+  </div>
+</div>
+<div class="buttonWrap">
+  <a href="/mensagem">
+  <button class="button" role="button">Envia uma mensagem :)</button>
+  </a>
+</div>
+<div class="postsWrap">
+  <p class="reply">
+    {% for post in posts %}
+        <div class="post">
+            <div class="body"> {{ post }} </div>
+        </div>
+    {%endfor%}
+  </p>
+</div>

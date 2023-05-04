@@ -1,0 +1,23 @@
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'createMessage.css') }}">
+</head>
+<div class="wrap">
+    <div class="title">
+      Mural Anônimo
+    </div>
+  </div>
+<div class="wrap">
+    <form id="contact" action="/mensagem" method="post">
+        <div class="inputField">
+          <textarea name="message" id="message" placeholder="Digita alguma merda ai"></textarea>
+          <span class="valid_info_message"></span>
+        </div>
+  
+        <div class="inputField btn">
+          <button type="submit" class="button" class="main-gradient-button">Enviar</button>
+        </div>
+  
+      </form>
+
+</div>
